@@ -1,0 +1,54 @@
+
+employées
+
+action:
+
+recevoir son salaire
+
+
+méthode:
+caclul du salaire	
+
+
+
+propriétés
+	nom
+	prénom	
+	age
+
+
+commericaux
+
+action :
+recevoir son salaire
+
+
+méthode: 
+calcul du salaire
+
+
+
+propriété:
+	nom
+	prénom	
+	age
+
+
+
+
+techniciens
+
+
+
+action:
+recevoir un salaire
+
+
+méthode:
+
+calcul du salaire
+
+propriété:
+	nom
+	prénom	
+	age
