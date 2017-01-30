@@ -1,54 +1,76 @@
+Employés:
+	
+	méthode:
+		-ajout employé;
+		-modif employé;
+		-suppression employé;
+		-calcul de salaire;
+		-affichage des caractéristiques;
 
-employées
+	propriété:
+		-nom;
+		-prénom;
+		-âge;
 
-action:
-
-recevoir son salaire
-
-
-méthode:
-caclul du salaire	
-
-
-
-propriétés
-	nom
-	prénom	
-	age
-
-
-commericaux
-
-action :
-recevoir son salaire
+  ---->	Commerciaux:
+		
+		méthode:
+			-getSalaire;
+		
+		propriété:
+			-salaire(2500¿);
 
 
-méthode: 
-calcul du salaire
+	  ---->	Vendeur:
+	
+			méthode:
+				-getPrime;
+			propriété:
+				-prime(100¿);
 
 
+	  ----> Représentant:
+			
+			méthode:
+				-getPrime;
+				-getFrais;
 
-propriété:
-	nom
-	prénom	
-	age
-
-
-
-
-techniciens
-
+			propriété:
+				-prime(250¿);
+				-frais.déplacement(50¿);
 
 
-action:
-recevoir un salaire
+  ---->	Techniciens:
+			
+		méthode:
+			-getPoste;
+			
+		propriété:
+			
+		
+	  ---->	Salarié:
+
+			méthode:
+				-getSalaire;
+			propriété:
+				-salaire(2000¿);
+
+	  ----> Intérimaire:
+	  					
+			méthode:
+				-getSalaire;
+			
+			propriété:
+				-salaire(24,5¿/h);
 
 
-méthode:
+Entreprise:
+	
+	méthode:
 
-calcul du salaire
-
-propriété:
-	nom
-	prénom	
-	age
+	propriété:
+		-nom;
+		-vendeur;
+		-représentant;
+		-technicien;
+		-intérimaire;
