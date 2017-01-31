@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string>
-use namespace std;
+using namespace std;
 
 class Entreprise {
     public:
@@ -12,23 +12,18 @@ class Entreprise {
 
         string getName() const; //Afficher nom
         void setName(string newName); //Modifier nom
-        void delName() const; //Supprimer nom
 
-        string getVendeur(int id = NULL) const; //Afficher vendeur
-        void setVendeur(string newName, int id = NULL); //Modifier vendeur
-        void delVendeur(int id) const; //Supprimer vendeur
+        string getVendeur(int id = -1) const; //Afficher vendeur
+        void setVendeur(string newName, int id = -1); //Modifier vendeur
 
-        string getRepresentant(int id = NULL) const; //Afficher representant
-        void setRepresentant(string newName, int id = NULL); //Modifier representant
-        void delRepresentant(int id) const; //Supprimer representant
+        string getRepresentant(int id = -1) const; //Afficher representant
+        void setRepresentant(string newName, int id = -1); //Modifier representant
 
-        string setTechnicien(int id = NULL) const; //Afficher technicien
-        void setTechnicien(int id, string newTechnicien); //Modifier technicien
-        void delName(int id) const; //Supprimer technicien
+        string setTechnicien(int id = -1) const; //Afficher technicien
+        void setTechnicien(string newTechnicien, int id = -1); //Modifier technicien
 
-        string getInterimaire(int id = NULL) const; //Afficher interimaire
-        void setInterimaire(string newInterimaire, int id = NULL); //Modifier interimaire
-        void delInterimaire(int id) const; //Supprimer interimaire
+        string getInterimaire(int id = -1) const; //Afficher interimaire
+        void setInterimaire(string newInterimaire, int id = -1); //Modifier interimaire
 
         double calculSalaire();
 
