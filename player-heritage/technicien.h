@@ -9,6 +9,7 @@
 class Technicien : public Employe {
     public:
         Technicien();
+        double calculSalaire();
 };
 
 class Interimaire : public Technicien {
@@ -17,6 +18,8 @@ class Interimaire : public Technicien {
         
         int getNbHeures();
         void setNbHeures(int nbHeures);
+
+        double calculSalaire();
 
     private:
         int m_nbHeures;

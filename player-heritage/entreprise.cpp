@@ -1,51 +1,70 @@
 #include <stdio.h>
+#include <iostream>
 #include <string>
 #include "entreprise.h"
+#include "commercial.h"
 using namespace std;
 
 Entreprise::Entreprise() {
 
 }
+
 Entreprise::Entreprise(string nom, string vendeur, string representant, string technicien, string interimaire) {
 
 }
 
-string Entreprise::getName() const {
-    return nom;
-}
-void Entreprise::setName(string newName) {
-
+string Entreprise::getNom() const {
+    return m_nom;
 }
 
-string Entreprise::getVendeur(int id) const {
-    return vendeur[id];
-}
-void Entreprise::setVendeur(string newName, int id){
-
+void Entreprise::setNom(string nom) {
+    m_nom = nom;
 }
 
-string Entreprise::getRepresentant(int id) const {
-    return representant[id];
-}
-void Entreprise::setRepresentant(string newName, int id) {
-
-}
-
-string Entreprise::setTechnicien(int id) const {
-    return technicien[id];
-}
-void Entreprise::setTechnicien(string newTechnicien, int id) {
-
+Vendeur Entreprise::getVendeur(int id) const {
+    if (id >= 0) {
+        return m_vendeur[id];
+    }
 }
 
-string Entreprise::getInterimaire(int id) const {
-    return interimaire[id];
+void Entreprise::setVendeur(Vendeur vendeur, int id) {
+    if (id >= 0) {
+        m_vendeur[id] = vendeur;
+    }
 }
-void Entreprise::setInterimaire(string newInterimaire, int id) {
 
+Representant Entreprise::getRepresentant(int id) const {
+    if (id >= 0) {
+        return m_representant[id];
+    }
 }
 
-double Entreprise::calculSalaire() {
-    double salaire;
-    return salaire;
+void Entreprise::setRepresentant(Representant representant, int id) {
+    if (id >= 0) {
+        m_representant[id] = representant;
+    }
+}
+
+Technicien Entreprise::getTechnicien(int id) const {
+    if (id >= 0) {
+        return m_technicien[id];
+    }
+}
+
+void Entreprise::setTechnicien(Technicien technicien, int id) {
+    if (id >= 0) {
+        m_technicien[id] = technicien;
+    }
+}
+
+Interimaire Entreprise::getInterimaire(int id) const {
+    if (id >= 0) {
+        return m_interimaire[id];
+    }
+}
+
+void Entreprise::setInterimaire(Interimaire interimaire, int id) {
+    if (id >= 0) {
+        m_interimaire[id] = interimaire;
+    }
 }

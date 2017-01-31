@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include "entreprise.h"
 #include "employe.h"
 using namespace std;
 
@@ -51,3 +50,21 @@ int Employe::getAge() const {
 void Employe::setAge(int age) {
     m_age = age;
 }
+
+int Employe::getSalaire() const {
+    return m_salaire;
+}
+
+void Employe::setSalaire(double salaire) {
+    m_salaire = salaire;
+}
+
+int Employe::getSalaireDeBase() const {
+    return m_salaireDeBase;
+}
+
+void Employe::setSalaireDeBase(int salaireDeBase) {
+    m_salaireDeBase = salaireDeBase;
+}
+
+

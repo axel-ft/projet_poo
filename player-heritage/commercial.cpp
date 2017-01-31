@@ -5,7 +5,7 @@
 #include "commercial.h"
 
 Commercial::Commercial() {
-    setSalaire(2500);
+    setSalaireDeBase(2500);
 }
 
 int Commercial::getNombreDePrimes() {
@@ -29,6 +29,11 @@ Vendeur::Vendeur() {
     setPrime(100);
 }
 
+double Vendeur::calculSalaire() {
+    m_salaire = getSalaireDeBase() + getNombreDePrimes() * getPrime();
+    return m_salaire;
+}
+
 
 Representant::Representant() {
     setPrime(250);
@@ -49,4 +54,9 @@ int Representant::getNombreDeDeplacements() {
 
 void Representant::setNombreDeDeplacements(int nombreDeDeplacements) {
     m_nombreDeDeplacements = nombreDeDeplacements;
+}
+
+double Representant::calculSalaire() {
+    m_salaire = getSalaireDeBase() + getNombreDePrimes() * getPrime() + m_nombreDeDeplacements * m_fraisParDeplacement;
+    return m_salaire;
 }

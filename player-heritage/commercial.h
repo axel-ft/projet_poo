@@ -22,8 +22,7 @@ class Commercial : public Employe {
 class Vendeur : public Commercial {
     public:
         Vendeur();
-
-    private:
+        double calculSalaire();
 };
 
 class Representant : public Commercial {
@@ -34,6 +33,8 @@ class Representant : public Commercial {
 
         int getNombreDeDeplacements();
         void setNombreDeDeplacements(int nombreDeDeplacements);
+
+        double calculSalaire();
 
     private:
         int m_fraisParDeplacement;
