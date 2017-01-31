@@ -2,19 +2,21 @@
 #define DEF_EMPLOYE
 
 #include <string>
+#include "entreprise.h"
+use namespace std;
 
 class Employe
 {
 	public:
 		Employe();
-		Employe(std::string nom, std::string prenom, int age);
+		Employe(string nom, string prenom, int age);
 
-		void setName(std::string newName); //Ajout nom
-		void addName(std::string newName); //Modifier nom
+		void setName(string newName); //Ajout nom
+		void addName(string newName); //Modifier nom
 		void delName() const; //Supprimer nom
 
-		void setFName(std::string newFName); //Ajout prénom
-		void addFName(std::string newFName); //Modifier prénom
+		void setFName(string newFName); //Ajout prénom
+		void addFName(string newFName); //Modifier prénom
 		void delFName() const; //Supprimer prénom
 
 		void setAge(int newAge); //Ajout age
@@ -28,8 +30,8 @@ class Employe
 		double calculSalaire();
 
 	private:
-		std::string name;
-		std::string fName;
+		string name;
+		string fName;
 		int age;
 		double salaire;
 };

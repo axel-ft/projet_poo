@@ -6,8 +6,16 @@
 use namespace std;
 
 class Entreprise {
-	Entreprise();
-	Entreprise(string nom, string vendeur, string representant, string technicien, string interimaire);
+    public:
+        Entreprise();
+        Entreprise(string nom, string vendeur, string representant, string technicien, string interimaire);
+
+    private:
+        string nom,
+               vendeur,
+               representant,
+               technicien,
+               interimaire;
 
 
 };
