@@ -1,7 +1,7 @@
 #ifndef DEF_ENTREPRISE
 #define DEF_ENTREPRISE
 
-#include <stdio>
+#include <stdio.h>
 #include <string>
 use namespace std;
 
