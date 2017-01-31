@@ -7,20 +7,19 @@
 #include "employe.h"
 
 class Technicien : public Employe {
-	public:
+    public:
         Technicien();
-
-	private:
-        salaire = 2000;
 };
 
 class Interimaire : public Technicien {
-	public:
+    public:
         Interimaire();
+        
+        int getNbHeures();
+        void setNbHeures(int nbHeures);
 
-	private:
-		int nbHeures;
-        salaire = NULL;
+    private:
+        int m_nbHeures;
 };
 
 #endif

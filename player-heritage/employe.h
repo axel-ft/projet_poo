@@ -9,22 +9,25 @@ class Employe : public Entreprise
 {
 	public:
 		Employe();
-		Employe(std::string setName, std::string setFName, int setAge);
+		Employe(std::string name, std::string fName, int Age);
 
 		string getName() const; //Afficher nom
-		void setName(string newName); //Modifier nom
+		void setName(string name); //Modifier nom
 
 		string getFName() const; //Afficher prénom
-		void setFName(string newFName); //Modifier prénom
+		void setFName(string fName); //Modifier prénom
 
 		int getAge() const; //Afficher age
-		void setAge(int newAge); //Modifier age
+		void setAge(int age); //Modifier age
+
+		int getSalaire() const; //Afficher salaire
+		void setSalaire(double salaire); //Modifier salaire
 
 	private:
-		string name;
-		string fName;
-		int age;
-		double salaire;
+		string m_name;
+		string m_fName;
+		int m_age;
+		double m_salaire;
 };
 
 #endif
