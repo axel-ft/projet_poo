@@ -5,29 +5,23 @@
 #include "entreprise.h"
 use namespace std;
 
-class Employe
+class Employe : public Entreprise
 {
 	public:
 		Employe();
 		Employe(string nom, string prenom, int age);
 
-		void setName(string newName); //Ajout nom
-		void addName(string newName); //Modifier nom
+		string getName() const; //Afficher nom
+		void setName(string newName); //Modifier nom
 		void delName() const; //Supprimer nom
 
-		void setFName(string newFName); //Ajout prénom
-		void addFName(string newFName); //Modifier prénom
+		string getFName() const; //Afficher prénom
+		void setFName(string newFName); //Modifier prénom
 		void delFName() const; //Supprimer prénom
 
-		void setAge(int newAge); //Ajout age
-		void addAge(int newAge); //Modifier age
-		void delAge() const; //Supprimer age
-
-		std::string getName() const; //Afficher nom
-		std::string getFName() const; //Afficher prénom
 		int getAge() const; //Afficher age
-
-		double calculSalaire();
+		void setAge(int newAge); //Modifier age
+		void delAge() const; //Supprimer age
 
 	private:
 		string name;

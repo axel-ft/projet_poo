@@ -6,32 +6,38 @@
 
 class Commercial : public Employe {
 	public:
+        Employe();
 		int getSalaireDeBase();
-		void setSalaireDeBase(int newSalaireDeBase);
+		void setSalaire(int newSalaire);
+
+		int getPrime();
+		void setPrime(int newPrime);
 
 	private:
-		int salaireDeBase = 2500;
+		salaire = 2500;
+        int nombreDePrimes;
+        int const prime;
 };
 
 
 class Vendeur : public Commercial {
 	public:
-		int getPrime();
-		void setPrime(int newPrime);
+        Commercial();
 
 	private:
-		int prime = 100;
+		prime = 100;
 };
 
 class Representant : public Commercial {
 	public:
-		int getPrime();
-		void setPrime(int newPrime);
+        Representant();
+        int getFraisParDeplacement();
 		void setFraisParDeplacement(int newFrais);
 
 	private:
-		int prime = 250;
-		int fraisParDeplacement = 50;
+		prime = 250;
+		int const fraisParDeplacement = 50;
+        int nombreDeDeplacements;
 };
 
 #endif
