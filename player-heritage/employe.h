@@ -2,29 +2,38 @@
 #define DEF_EMPLOYE
 
 #include <string>
-#include "entreprise.h"
 using namespace std;
 
-class Employe : public Entreprise
-{
-	public:
-		Employe();
-		Employe(std::string setName, std::string setFName, int setAge);
+class Employe {
+    public:
+        Employe();
+        Employe(std::string name, std::string fName, int Age);
 
-		string getName() const; //Afficher nom
-		void setName(string newName); //Modifier nom
+        string getName() const; //Afficher nom
+        void setName(string name); //Modifier nom
 
-		string getFName() const; //Afficher prénom
-		void setFName(string newFName); //Modifier prénom
+        string getFName() const; //Afficher prénom
+        void setFName(string fName); //Modifier prénom
 
-		int getAge() const; //Afficher age
-		void setAge(int newAge); //Modifier age
+        int getAge() const; //Afficher age
+        void setAge(int age); //Modifier age
 
-	private:
-		string name;
-		string fName;
-		int age;
-		double salaire;
+        int getSalaire() const; //Afficher salaire
+        void setSalaire(double salaire); //Modifier salaire
+
+        int getSalaireDeBase() const; //Afficher salaire de base
+        void setSalaireDeBase(int salaireDeBase); //Modifier salaire de base
+
+        double calculSalaire();
+
+    private:
+        string m_name;
+        string m_fName;
+        int m_age;
+        int m_salaireDeBase;
+
+    protected:
+        double m_salaire;
 };
 
 #endif

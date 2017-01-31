@@ -5,39 +5,40 @@
 #include "employe.h"
 
 class Commercial : public Employe {
-	public:
-        Employe();
-		int getSalaireDeBase();
-		void setSalaire(int newSalaire);
+    public:
+        Commercial();
+        int getNombreDePrimes();
+        void setNombreDePrimes(int nombreDePrimes);
 
-		int getPrime();
-		void setPrime(int newPrime);
+        int getPrime();
+        void setPrime(int prime);
 
-	private:
-		salaire = 2500;
-        int nombreDePrimes;
-        int const prime;
+    private:
+        int m_nombreDePrimes;
+        int m_prime;
 };
 
 
 class Vendeur : public Commercial {
-	public:
-        Commercial();
-
-	private:
-		prime = 100;
+    public:
+        Vendeur();
+        double calculSalaire();
 };
 
 class Representant : public Commercial {
-	public:
+    public:
         Representant();
         int getFraisParDeplacement();
-		void setFraisParDeplacement(int newFrais);
+        void setFraisParDeplacement(int fraisParDeplacement);
 
-	private:
-		prime = 250;
-		int const fraisParDeplacement = 50;
-        int nombreDeDeplacements;
+        int getNombreDeDeplacements();
+        void setNombreDeDeplacements(int nombreDeDeplacements);
+
+        double calculSalaire();
+
+    private:
+        int m_fraisParDeplacement;
+        int m_nombreDeDeplacements;
 };
 
 #endif

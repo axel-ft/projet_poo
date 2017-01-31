@@ -1,49 +1,70 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include "entreprise.h"
 #include "employe.h"
 using namespace std;
 
 Employe::Employe() {
-    string setName, setFName;
-    int setAge;
+    string name, fName;
+    int age;
     cout << "Entrez un nom : ";
-    cin >> setName;
-    name = setName;
+    cin >> name;
+    m_name = name;
     cout << endl;
     cout << "Entrez un prénom : ";
-    cin >> setFName;
-    fName = setFName;
+    cin >> fName;
+    m_fName = fName;
     cout << endl;
     cout << "Entrez un age : ";
-    cin >> setAge;
-    age = setAge;
+    cin >> age;
+    m_age = age;
     cout << endl;
 }
-Employe::Employe(std::string setName, std::string setFName, int setAge) {
-    name = setName;
-    fName = setFName;
-    age = setAge;
+
+Employe::Employe(std::string name, std::string fName, int age) {
+    m_name = name;
+    m_fName = fName;
+    m_age = age;
 }
 
 string Employe::getName() const {
-    return name;
+    return m_name;
 }
-void Employe::setName(string newName) {
-    name = newName;
+
+void Employe::setName(string name) {
+    m_name = name;
 }
 
 string Employe::getFName() const {
-    return fName;
+    return m_fName;
 }
-void Employe::setFName(string newFName) {
-    fName = newFName;
+
+void Employe::setFName(string fName) {
+    m_fName = fName;
 }
 
 int Employe::getAge() const {
-    return age;
+    return m_age;
 }
-void Employe::setAge(int newAge) {
-    age = newAge;
+
+void Employe::setAge(int age) {
+    m_age = age;
 }
+
+int Employe::getSalaire() const {
+    return m_salaire;
+}
+
+void Employe::setSalaire(double salaire) {
+    m_salaire = salaire;
+}
+
+int Employe::getSalaireDeBase() const {
+    return m_salaireDeBase;
+}
+
+void Employe::setSalaireDeBase(int salaireDeBase) {
+    m_salaireDeBase = salaireDeBase;
+}
+
+
