@@ -22,12 +22,14 @@ class Commercial : public Employe {
 class Vendeur : public Commercial {
     public:
         Vendeur();
+        Vendeur(std::string name, std::string fName, int Age);
         double calculSalaire();
 };
 
 class Representant : public Commercial {
     public:
         Representant();
+        Representant(std::string name, std::string fName, int Age);
         int getFraisParDeplacement();
         void setFraisParDeplacement(int fraisParDeplacement);
 

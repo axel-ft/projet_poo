@@ -9,12 +9,14 @@
 class Technicien : public Employe {
     public:
         Technicien();
+        Technicien(std::string name, std::string fName, int Age);
         double calculSalaire();
 };
 
 class Interimaire : public Technicien {
     public:
         Interimaire();
+        Interimaire(std::string name, std::string fName, int Age);
         
         int getNbHeures();
         void setNbHeures(int nbHeures);
